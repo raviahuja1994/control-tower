@@ -1,0 +1,12 @@
+<form (submit)="onGoogleMapSubmit()">
+<div class="form-group">
+  <div class="input-group">
+    <span class="input-group-addon">Shipment Id:</span>
+    <input type="text" class="form-control" [(ngModel)]="shipmentid" name="shipmentid">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="submit" style="width: 200px">Trace</button>
+    </span>
+  </div>
+</div>
+</form>
+<div id="map"></div>

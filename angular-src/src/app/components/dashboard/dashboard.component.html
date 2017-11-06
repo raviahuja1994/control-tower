@@ -1,0 +1,13 @@
+<p-dataTable [value]="cars" [(selection)]="selectedCars3" dataKey="vin" [paginator]="true" [rows]="5" [headerCheckboxToggleAllPages]="true">
+  <p-header>Shipment Details</p-header>
+  <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+  <p-column field="vin" header="Shipmentid"></p-column>
+  <p-column field="year" header="Date"></p-column>
+  <p-column field="brand" header="Driver"></p-column>
+  <p-column field="color" header="Car"></p-column>
+  <p-footer>
+    <ul>
+      <li *ngFor="let car of selectedCars3" style="text-align: left">{{car.vin + ' - ' + car.brand + ' - ' + car.year + ' - ' + car.color}}</li>
+    </ul>
+  </p-footer>
+</p-dataTable>

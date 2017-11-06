@@ -1,0 +1,29 @@
+{
+  "name": "ilm-bam",
+  "version": "1.0.0",
+  "description": "Business Activity Monitor",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "@angular/animations": "^4.2.6",
+    "angular2-jwt": "^0.2.3",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "express-content-type-override": "^1.1.0",
+    "express-xml-bodyparser": "^0.3.0",
+    "jsonwebtoken": "*",
+    "mongoclient": "^1.0.3",
+    "mongoose": "^4.12.6",
+    "passport": "*",
+    "passport-jwt": "*",
+    "xml2js": "^0.4.19"
+  },
+  "author": "Vivek Reddy",
+  "license": "ISC",
+  "devDependencies": {}
+}

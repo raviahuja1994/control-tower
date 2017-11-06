@@ -1,0 +1,8 @@
+#map {
+  height: 500px;
+  margin-left: 10px;
+}
+#panel panel-success {
+  float: left;
+  border: 1px solid black;
+}

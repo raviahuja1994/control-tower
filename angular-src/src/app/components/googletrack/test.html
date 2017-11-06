@@ -1,0 +1,51 @@
+<!--<form (submit)="onGoogleMapSubmit()">-->
+<!--<div class="form-group">-->
+<!--<div class="input-group">-->
+<!--<span class="input-group-addon">Shipment Id:</span>-->
+<!--<input type="text" class="form-control" [(ngModel)]="shipment" name="shipment">-->
+<!--<span class="input-group-btn">-->
+<!--<button class="btn btn-default" type="submit" style="width: 200px">Trace</button>-->
+<!--</span>-->
+<!--</div>-->
+<!--</div>-->
+<!--</form>-->
+<html>
+<body>
+<form (submit)="onstatusSubmit()">
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon">Shipment Id:</span>
+      <input type="text" class="form-control" [(ngModel)]="status" name="status">
+      <span class="input-group-btn">
+      <button class="btn btn-default" type="submit" style="width: 200px">Trace</button>
+    </span>
+    </div>
+  </div>
+</form>
+
+<div style="float: left;  margin-right: 10px;
+  /*padding: 10px;*/
+  max-width: 400px;
+  height: 500px;" class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Shipments</h3>
+  </div>
+  <div class="ui-widget-header" style="padding:4px 10px;border-bottom: 0 none">
+    <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+    <input #gb type="text" pInputText size="18" placeholder="Global Filter">
+  </div>
+  <p-dataTable [style]="{'width':'200px'}" [globalFilter]="gb" [value]="shipmentids" (onHeaderCheckboxToggle)="onTableHeaderCheckboxToggle($event)" [(selection)]="selectedshipments" dataKey="shipmentid" (onRowClick)="onRowClick($event)" (onRowSelect)="onRowSelect($event)" (onRowUnselect)="onRowUnselect($event)">
+
+    <!--<p-header>Checkbox Selection</p-header>-->
+    <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+    <p-column field="shipmentid" header="Shipment Id"></p-column>
+    <!--<p-footer>-->
+    <!--<ul>-->
+    <!--<li *ngFor="let shipment of selectedshipments" style="text-align: left">{{shipment.shipmentid}}</li>-->
+    <!--</ul>-->
+    <!--</p-footer>-->
+  </p-dataTable>
+</div>
+<div class="panel panel-success" id="map"></div>
+</body>
+</html>
